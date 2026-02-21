@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #baa1d3;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Container */
+.container {
+
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+
+.my-div {
+    width: 100%;
+    max-width: 520px;
+    background: #ffffff;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    margin: 20px auto 20px;
+    box-shadow: 0 20px 40px rgba(219, 6, 6, 0.15);
+}
+
+/* Heading */
+.my-div h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    color: #0b6075;
+    font-weight: 750;
+}
+
+.my-div img {
+    width: 88px;
+    margin-left: 10px;
+}
+
+/* Inner Div */
+.my-inner-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding-left: 10px;
+    gap: 10px;
+}
+
+#input-Box {
+    flex: 1;
+    border: 2px solid #0e819e;
+    padding: 12px 22px;
+    border-radius: 30px;
+    outline: none;
+    font-size: 20px;  
+    background: transparent;
+    transition: 0.3s ease;
+    color: #066146;
+}
+
+#input-Box:focus {
+    border-color: #ddcf05;
+    box-shadow: 0 0 8px rgba(14, 129, 158, 0.4);
+}
+
+/* Add Button */
+button {
+    width: 70px;
+    padding: 12px 22px;
+    border: 2px;
+    border-radius: 40px;
+    background: #04684a;
+    color: rgb(229, 255, 0);
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: 700;
+}
+
+
+/* Task List */
+ul {
+    list-style: none;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+ul li {
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    margin-bottom: 12px;
+    background: #024b58;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    font-size: 20px;
+    transition: 0.3s ease;   
+}
+
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(roundbox.png);
+    background-size: cover;
+    background-position: center;
+    top: 9px;
+    left: 9px;
+}
+
+ul li:hover {
+    background: #046b72;
+    transform: translateX(5px);
+}
+
+/* Completed Task */
+ul li.checked {
+    text-decoration: line-through;
+    color: #eeff00ec;
+    font-weight: 700px;
+}
+
+ul li.checked::before {
+    background-image: url(checked.jpeg);
+}
+
+/* Delete Button */
+ul li span {
+    position: absolute;
+    right: 0px;  
+    top: 1px;
+    font-size: 30px;
+    color: #ffe600;
+    cursor: pointer;
+    transition: 0.3s;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    transform: scale(1.2);
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+
+    .my-inner-div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #input-Box {
+        width: 100%;
+        max-width: 300px;
+    }
+}
